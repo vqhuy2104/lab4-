@@ -1,0 +1,428 @@
+:root {
+  --green: #739846;
+  --dark: #3c413e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+.menu-button {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 20;
+  padding: 9px 13px;
+  border-radius: 5px;
+  background: #eee;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 15;
+  display: none;
+  width: 250px;
+  height: 100%;
+  padding-top: 90px;
+  background: #e5e5e5;
+}
+
+.nav a {
+  display: block;
+  padding: 17px 28px;
+  color: #333;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.nav a:hover {
+  background: #d2d2d2;
+  color: var(--green);
+}
+
+#menu-toggle:checked ~ .nav {
+  display: block;
+}
+
+.header {
+  min-height: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)), url("images/hero-tea.svg") center/cover no-repeat;
+}
+
+.header p,
+.small-title {
+  color: var(--green);
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.header h1 {
+  max-width: 900px;
+  font-size: 50px;
+  letter-spacing: 9px;
+}
+
+.header > a,
+.button {
+  display: inline-block;
+  padding: 14px 23px;
+  border: 4px double #36521d;
+  background: var(--green);
+  color: #17200e;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.features article {
+  min-height: 270px;
+  padding: 55px 30px;
+  text-align: center;
+}
+
+.features h2 {
+  color: var(--green);
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.features p {
+  line-height: 1.7;
+}
+
+.features .active {
+  background: var(--green);
+}
+
+.features .active h2 {
+  color: white;
+}
+
+.about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 8%;
+}
+
+.about-image {
+  padding-bottom: 110px;
+  border-radius: 18px;
+  background: var(--green);
+  overflow: hidden;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+}
+
+.about-content {
+  max-width: 470px;
+  line-height: 1.7;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 90px 8%;
+  background: var(--dark);
+  color: white;
+}
+
+.product-intro {
+  line-height: 1.7;
+}
+
+.product-card {
+  border-bottom: 4px solid var(--green);
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.product-card h3 {
+  letter-spacing: 3px;
+}
+
+.product-card > p {
+  color: var(--green);
+}
+
+.services,
+.gallery,
+.media-section,
+.contact {
+  padding: 90px 8%;
+}
+
+.services {
+  background: #ededed;
+}
+
+.section-title {
+  margin-bottom: 45px;
+  text-align: center;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.service-list article {
+  padding-bottom: 30px;
+  border: 4px double var(--green);
+  border-radius: 18px;
+  background: var(--green);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.service-list img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-list h3 {
+  min-height: 52px;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.service-list a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background: white;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.slideshow {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #222;
+}
+
+.slideshow input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform .6s ease;
+}
+
+.slides figure {
+  position: relative;
+  width: 33.3333%;
+  margin: 0;
+}
+
+.slides img {
+  display: block;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+}
+
+.slides figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, .55);
+  text-align: center;
+  color: white;
+  font-size: 21px;
+  letter-spacing: 3px;
+}
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide-2:checked ~ .slides {
+  transform: translateX(-33.3333%);
+}
+
+#slide-3:checked ~ .slides {
+  transform: translateX(-66.6666%);
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  left: 0;
+  text-align: center;
+}
+
+.dots label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--green);
+  cursor: pointer;
+}
+
+.media-section,
+.contact {
+  background: #f3f3f3;
+}
+
+.video {
+  position: relative;
+  max-width: 900px;
+  margin: auto;
+  padding-top: 50.625%;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map {
+  display: block;
+  width: 100%;
+  height: 480px;
+  border: 0;
+}
+
+.social {
+  margin-top: 50px;
+  padding: 25px;
+  background: white;
+}
+
+.fb-comments {
+  width: 100%;
+  margin-top: 25px;
+}
+
+footer {
+  padding: 32px;
+  background: #292d2b;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 900px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about {
+    grid-template-columns: 1fr;
+  }
+
+  .about-content {
+    max-width: none;
+  }
+
+  .products,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card img,
+  .service-list img {
+    height: auto;
+  }
+}
+
+@media (max-width: 560px) {
+  .header {
+    min-height: 580px;
+    background-position: center;
+  }
+
+  .header p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .header h1 {
+    font-size: 34px;
+    line-height: 1.5;
+    letter-spacing: 6px;
+  }
+
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .about,
+  .products,
+  .services,
+  .gallery,
+  .media-section,
+  .contact {
+    padding: 65px 20px;
+  }
+
+  .about-image {
+    padding-bottom: 70px;
+  }
+
+  .slides img {
+    height: 300px;
+  }
+
+  .map {
+    height: 350px;
+  }
+}

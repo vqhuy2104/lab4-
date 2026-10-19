@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7.1 - CSS Grid Layout</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <header class="header" id="home">
+      <button class="menu-button">☰</button>
+      <div class="header-content">
+        <p>Over one hundred flavors of tea</p>
+        <h1>SPECIALLY CRAFTED TEA</h1>
+        <a href="#products">EXPLORE</a>
+      </div>
+    </header>
+    <section class="features" id="features">
+      <article class="feature">
+        <h2>MADE WITH LOVE</h2>
+        <p>Our tea is made with love, from the collection of the leaves to the brewing.</p>
+      </article>
+      <article class="feature active">
+        <h2>RELAXATION</h2>
+        <p>Set aside anxiety and relax after a hard day with a cup of hot tea.</p>
+      </article>
+      <article class="feature">
+        <h2>ENERGY</h2>
+        <p>Our tea will energize you with vitamins and invigorate the rest of the day.</p>
+      </article>
+      <article class="feature">
+        <h2>FAMILY RECIPE</h2>
+        <p>All our recipes are passed down from generation to generation.</p>
+      </article>
+    </section>
+    <section class="about" id="about">
+      <div class="about-image">
+        <img src="../../assets/hero-tea.svg" alt="Tea Station">
+      </div>
+      <div class="about-content">
+        <p class="small-title">About Our</p>
+        <h2>TEA STATION</h2>
+        <p>Once upon a time we only had a couple of teapots and enjoyed tea only with our family. Over time, we were able to afford to buy a small tea plantation.</p>
+        <p>Now we have a whole teahouse and we delight many people with delicious and hot tea.</p>
+        <a href="#services">LEARN MORE</a>
+      </div>
+    </section>
+    <section class="products" id="products">
+      <div class="product-intro">
+        <p class="small-title">Check Out</p>
+        <h2>OUR PRODUCTS</h2>
+        <p>Our assortment includes long tea, relaxing green tea with spices, lemon juice, jasmine and cinnamon.</p>
+        <a href="#">INVENTORY</a>
+      </div>
+      <article class="product-card">
+        <img src="../../assets/black-tea.svg" alt="Black long tea">
+        <h3>BLACK LONG TEA</h3>
+        <p>$ 3.99</p>
+      </article>
+      <article class="product-card">
+        <img src="../../assets/jasmine-tea.svg" alt="Green tea with jasmine">
+        <h3>GREEN TEA WITH JASMINE</h3>
+        <p>$ 4.99</p>
+      </article>
+    </section>
+    <section class="services" id="services">
+      <div class="section-title">
+        <p class="small-title">Explore</p>
+        <h2>OUR SERVICES</h2>
+      </div>
+      <div class="service-list">
+        <article class="service-card">
+          <img src="../../assets/recipe.svg" alt="Custom recipe service">
+          <h3>Custom Recipe Service</h3>
+          <a href="#">Read More</a>
+        </article>
+        <article class="service-card">
+          <img src="../../assets/delivery.svg" alt="Home delivery service">
+          <h3>Home Delivery Service</h3>
+          <a href="#">Read More</a>
+        </article>
+        <article class="service-card">
+          <img src="../../assets/jasmine-tea.svg" alt="Tea aging service">
+          <h3>Tea Aging Service</h3>
+          <a href="#">Read More</a>
+        </article>
+      </div>
+    </section>
+    <footer class="footer">TEA STATION - 2026</footer>
+  </main>
+</body>
+</html>

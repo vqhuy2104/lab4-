@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tea Station</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"></script>
+  <input type="checkbox" id="menu-toggle">
+  <label for="menu-toggle" class="menu-button">☰</label>
+  <nav class="nav">
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#about">About</a>
+    <a href="#products">Products</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+  <header class="header" id="home">
+    <p>Over one hundred flavors of tea</p>
+    <h1>SPECIALLY CRAFTED TEA</h1>
+    <a href="#products">EXPLORE</a>
+  </header>
+  <section class="features" id="features">
+    <article>
+      <h2>MADE WITH LOVE</h2>
+      <p>Our tea is made with love, from the collection of the leaves to the brewing.</p>
+    </article>
+    <article class="active">
+      <h2>RELAXATION</h2>
+      <p>Set aside anxiety and relax after a hard day with a cup of hot tea.</p>
+    </article>
+    <article>
+      <h2>ENERGY</h2>
+      <p>Our tea will energize you with vitamins and invigorate the rest of the day.</p>
+    </article>
+    <article>
+      <h2>FAMILY RECIPE</h2>
+      <p>All our recipes are passed down from generation to generation.</p>
+    </article>
+  </section>
+  <section class="about" id="about">
+    <div class="about-image">
+      <img src="images/hero-tea.svg" alt="Tea Station">
+    </div>
+    <div class="about-content">
+      <p class="small-title">About Our</p>
+      <h2>TEA STATION</h2>
+      <p>Once upon a time we only had a couple of teapots and enjoyed tea only with our family. Over time, we were able to afford to buy a small tea plantation.</p>
+      <p>Now we have a whole teahouse and we delight many people with delicious and hot tea.</p>
+      <a class="button" href="#services">LEARN MORE</a>
+    </div>
+  </section>
+  <section class="products" id="products">
+    <div class="product-intro">
+      <p class="small-title">Check Out</p>
+      <h2>OUR PRODUCTS</h2>
+      <p>Our assortment includes long tea, relaxing green tea with spices, lemon juice, jasmine and cinnamon.</p>
+      <a class="button" href="#gallery">INVENTORY</a>
+    </div>
+    <article class="product-card">
+      <a href="images/black-tea.svg" data-lightbox="products" data-title="Black Long Tea">
+        <img src="images/black-tea.svg" alt="Black long tea">
+      </a>
+      <h3>BLACK LONG TEA</h3>
+      <p>$ 3.99</p>
+    </article>
+    <article class="product-card">
+      <a href="images/jasmine-tea.svg" data-lightbox="products" data-title="Green Tea With Jasmine">
+        <img src="images/jasmine-tea.svg" alt="Green tea with jasmine">
+      </a>
+      <h3>GREEN TEA WITH JASMINE</h3>
+      <p>$ 4.99</p>
+    </article>
+  </section>
+  <section class="services" id="services">
+    <div class="section-title">
+      <p class="small-title">Explore</p>
+      <h2>OUR SERVICES</h2>
+    </div>
+    <div class="service-list">
+      <article>
+        <img src="images/recipe.svg" alt="Custom recipe service">
+        <h3>Custom Recipe Service</h3>
+        <a href="#">Read More</a>
+      </article>
+      <article>
+        <img src="images/delivery.svg" alt="Home delivery service">
+        <h3>Home Delivery Service</h3>
+        <a href="#">Read More</a>
+      </article>
+      <article>
+        <img src="images/jasmine-tea.svg" alt="Tea aging service">
+        <h3>Tea Aging Service</h3>
+        <a href="#">Read More</a>
+      </article>
+    </div>
+  </section>
+  <section class="gallery" id="gallery">
+    <div class="section-title">
+      <p class="small-title">Our Gallery</p>
+      <h2>SLIDESHOW</h2>
+    </div>
+    <div class="slideshow">
+      <input type="radio" name="slide" id="slide-1" checked>
+      <input type="radio" name="slide" id="slide-2">
+      <input type="radio" name="slide" id="slide-3">
+      <div class="slides">
+        <figure><img src="images/hero-tea.svg" alt="Tea Station"><figcaption>Specially Crafted Tea</figcaption></figure>
+        <figure><img src="images/black-tea.svg" alt="Black tea"><figcaption>Black Long Tea</figcaption></figure>
+        <figure><img src="images/jasmine-tea.svg" alt="Jasmine tea"><figcaption>Green Tea With Jasmine</figcaption></figure>
+      </div>
+      <div class="dots">
+        <label for="slide-1"></label>
+        <label for="slide-2"></label>
+        <label for="slide-3"></label>
+      </div>
+    </div>
+  </section>
+  <section class="media-section">
+    <div class="section-title">
+      <p class="small-title">Watch Now</p>
+      <h2>TEA VIDEO</h2>
+    </div>
+    <div class="video">
+      <iframe src="https://www.youtube.com/embed/r4c62gQw6Lw" title="Tea video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+  </section>
+  <section class="contact" id="contact">
+    <div class="section-title">
+      <p class="small-title">Find Us</p>
+      <h2>FPT POLYTECHNIC HÀ NỘI</h2>
+    </div>
+    <iframe class="map" src="https://www.google.com/maps?q=FPT+Polytechnic+Hanoi&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="FPT Polytechnic Hà Nội"></iframe>
+    <div class="social">
+      <h2>LIKE, SHARE VÀ COMMENT</h2>
+      <div class="fb-like" data-href="https://example.com/tea-station" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+      <div class="fb-comments" data-href="https://example.com/tea-station" data-width="100%" data-numposts="5"></div>
+    </div>
+  </section>
+  <footer>TEA STATION - 2026</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>

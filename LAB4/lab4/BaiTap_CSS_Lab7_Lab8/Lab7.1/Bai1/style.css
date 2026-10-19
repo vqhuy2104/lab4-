@@ -1,0 +1,239 @@
+:root {
+  --green: #739846;
+  --dark: #3c413e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-areas:
+    "header header header header header header header header header header header header"
+    "features features features features features features features features features features features features"
+    "about about about about about about about about about about about about"
+    "products products products products products products products products products products products products"
+    "services services services services services services services services services services services services"
+    "footer footer footer footer footer footer footer footer footer footer footer footer";
+}
+
+.header {
+  grid-area: header;
+  position: relative;
+  min-height: 650px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .42), rgba(0, 0, 0, .42)), url("../../assets/hero-tea.svg") center/cover no-repeat;
+}
+
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 24px;
+}
+
+.header-content p,
+.small-title {
+  color: var(--green);
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.header-content h1 {
+  font-size: 48px;
+  letter-spacing: 8px;
+}
+
+.header-content a,
+.about-content a,
+.product-intro a {
+  display: inline-block;
+  padding: 13px 22px;
+  border: 4px double #36521d;
+  background: var(--green);
+  color: #17200e;
+  text-decoration: none;
+  letter-spacing: 4px;
+}
+
+.features {
+  grid-area: features;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.feature {
+  min-height: 270px;
+  padding: 55px 30px;
+  text-align: center;
+}
+
+.feature h2 {
+  color: var(--green);
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+.feature p {
+  line-height: 1.7;
+}
+
+.feature.active {
+  background: var(--green);
+}
+
+.feature.active h2 {
+  color: white;
+}
+
+.about {
+  grid-area: about;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 70px;
+  padding: 100px 8%;
+}
+
+.about-image {
+  padding-bottom: 110px;
+  border-radius: 18px;
+  background: var(--green);
+  overflow: hidden;
+}
+
+.about-image img {
+  display: block;
+  width: 100%;
+}
+
+.about-content {
+  max-width: 460px;
+  line-height: 1.7;
+}
+
+.products {
+  grid-area: products;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 45px;
+  padding: 90px 8%;
+  background: var(--dark);
+  color: white;
+}
+
+.product-intro {
+  line-height: 1.7;
+}
+
+.product-card {
+  border-bottom: 4px solid var(--green);
+}
+
+.product-card img {
+  width: 100%;
+  height: 230px;
+  object-fit: cover;
+  border-radius: 18px;
+}
+
+.product-card h3 {
+  letter-spacing: 3px;
+}
+
+.product-card p {
+  color: var(--green);
+}
+
+.services {
+  grid-area: services;
+  padding: 90px 8%;
+  background: #ededed;
+}
+
+.section-title {
+  text-align: center;
+}
+
+.service-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-top: 50px;
+}
+
+.service-card {
+  padding-bottom: 30px;
+  border: 4px double var(--green);
+  border-radius: 18px;
+  background: var(--green);
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+.service-card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  min-height: 50px;
+  padding: 0 20px;
+  line-height: 1.5;
+}
+
+.service-card a {
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 5px;
+  background: white;
+  color: var(--green);
+  text-decoration: none;
+}
+
+.footer {
+  grid-area: footer;
+  padding: 30px;
+  background: #292d2b;
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 850px) {
+  .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about,
+  .products,
+  .service-list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .header-content h1 {
+    font-size: 34px;
+  }
+}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 7.2 - Tiện ích và Slideshow</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="fb-root"></div>
+  <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v22.0"></script>
+  <header class="header">
+    <button class="menu-button">☰</button>
+    <div>
+      <p>Over one hundred flavors of tea</p>
+      <h1>TEA STATION</h1>
+    </div>
+  </header>
+  <main>
+    <section class="slideshow-section">
+      <p class="small-title">Our Gallery</p>
+      <h2>SLIDESHOW</h2>
+      <div class="slideshow">
+        <input type="radio" name="slide" id="slide-1" checked>
+        <input type="radio" name="slide" id="slide-2">
+        <input type="radio" name="slide" id="slide-3">
+        <div class="slides">
+          <figure class="slide slide-1">
+            <img src="../../assets/hero-tea.svg" alt="Tea Station">
+            <figcaption>Specially Crafted Tea</figcaption>
+          </figure>
+          <figure class="slide slide-2">
+            <img src="../../assets/black-tea.svg" alt="Black tea">
+            <figcaption>Black Long Tea</figcaption>
+          </figure>
+          <figure class="slide slide-3">
+            <img src="../../assets/jasmine-tea.svg" alt="Jasmine tea">
+            <figcaption>Green Tea With Jasmine</figcaption>
+          </figure>
+        </div>
+        <div class="dots">
+          <label for="slide-1"></label>
+          <label for="slide-2"></label>
+          <label for="slide-3"></label>
+        </div>
+      </div>
+    </section>
+    <section class="utilities">
+      <h2>LIKE VÀ SHARE</h2>
+      <div class="fb-like" data-href="https://example.com/tea-station" data-width="" data-layout="button_count" data-action="like" data-size="large" data-share="true"></div>
+      <h2>VIDEO</h2>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/r4c62gQw6Lw" title="Tea video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+      <h2>POST</h2>
+      <div class="widget-box">
+        <div class="fb-post" data-href="https://www.facebook.com/20531316728/posts/10154009990506729/" data-width="500" data-show-text="true"></div>
+      </div>
+      <h2>COMMENT</h2>
+      <div class="widget-box">
+        <div class="fb-comments" data-href="https://example.com/tea-station" data-width="100%" data-numposts="5"></div>
+      </div>
+      <p class="notice">Các tiện ích Facebook cần kết nối Internet và hoạt động ổn định nhất sau khi website được đưa lên GitHub Pages.</p>
+    </section>
+  </main>
+  <footer>TEA STATION - 2026</footer>
+</body>
+</html>

@@ -1,0 +1,195 @@
+:root {
+  --green: #739846;
+  --dark: #3c413e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  position: relative;
+  min-height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url("../../assets/hero-tea.svg") center/cover no-repeat;
+}
+
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 24px;
+}
+
+.header p,
+.small-title {
+  color: var(--green);
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.header h1 {
+  font-size: 48px;
+  letter-spacing: 8px;
+}
+
+main {
+  max-width: 1100px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+.slideshow-section,
+.utilities {
+  margin-bottom: 80px;
+}
+
+.slideshow-section > h2,
+.slideshow-section > p {
+  text-align: center;
+}
+
+.slideshow {
+  position: relative;
+  max-width: 850px;
+  margin: 35px auto;
+  overflow: hidden;
+  border-radius: 16px;
+  background: #222;
+}
+
+.slideshow input {
+  display: none;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  transition: transform .6s ease;
+}
+
+.slide {
+  position: relative;
+  width: 33.3333%;
+  margin: 0;
+}
+
+.slide img {
+  display: block;
+  width: 100%;
+  height: 480px;
+  object-fit: cover;
+}
+
+.slide figcaption {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  background: rgba(0, 0, 0, .55);
+  color: white;
+  text-align: center;
+  font-size: 22px;
+  letter-spacing: 3px;
+}
+
+#slide-1:checked ~ .slides {
+  transform: translateX(0);
+}
+
+#slide-2:checked ~ .slides {
+  transform: translateX(-33.3333%);
+}
+
+#slide-3:checked ~ .slides {
+  transform: translateX(-66.6666%);
+}
+
+.dots {
+  position: absolute;
+  right: 0;
+  bottom: 70px;
+  left: 0;
+  text-align: center;
+}
+
+.dots label {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 5px;
+  border: 2px solid white;
+  border-radius: 50%;
+  background: var(--green);
+  cursor: pointer;
+}
+
+.utilities {
+  display: grid;
+  gap: 25px;
+}
+
+.utilities h2 {
+  margin: 35px 0 0;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--green);
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.widget-box {
+  min-height: 160px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  background: #fafafa;
+}
+
+.notice {
+  padding: 15px;
+  background: #edf3e8;
+  line-height: 1.6;
+}
+
+footer {
+  padding: 30px;
+  background: var(--dark);
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 650px) {
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .slide img {
+    height: 300px;
+  }
+}

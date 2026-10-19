@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lab 8.1 - Lightbox và Google Map</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="header">
+    <button class="menu-button">☰</button>
+    <div>
+      <p>Over one hundred flavors of tea</p>
+      <h1>TEA STATION</h1>
+    </div>
+  </header>
+  <main>
+    <section class="products">
+      <div class="section-title">
+        <p>Check Out</p>
+        <h2>OUR PRODUCTS</h2>
+      </div>
+      <div class="product-list">
+        <article>
+          <a href="../../assets/black-tea.svg" data-lightbox="products" data-title="Black Long Tea">
+            <img src="../../assets/black-tea.svg" alt="Black long tea">
+          </a>
+          <h3>BLACK LONG TEA</h3>
+          <p>$ 3.99</p>
+        </article>
+        <article>
+          <a href="../../assets/jasmine-tea.svg" data-lightbox="products" data-title="Green Tea With Jasmine">
+            <img src="../../assets/jasmine-tea.svg" alt="Green tea with jasmine">
+          </a>
+          <h3>GREEN TEA WITH JASMINE</h3>
+          <p>$ 4.99</p>
+        </article>
+        <article>
+          <a href="../../assets/recipe.svg" data-lightbox="products" data-title="Custom Tea Recipe">
+            <img src="../../assets/recipe.svg" alt="Custom tea recipe">
+          </a>
+          <h3>CUSTOM TEA RECIPE</h3>
+          <p>$ 5.99</p>
+        </article>
+      </div>
+    </section>
+    <section class="video-section">
+      <div class="section-title">
+        <p>Watch Now</p>
+        <h2>YOUTUBE VIDEO</h2>
+      </div>
+      <div class="video">
+        <iframe src="https://www.youtube.com/embed/r4c62gQw6Lw" title="Tea video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+      </div>
+    </section>
+    <section class="map-section">
+      <div class="section-title">
+        <p>Find Us</p>
+        <h2>GOOGLE MAP</h2>
+      </div>
+      <iframe class="map" src="https://www.google.com/maps?q=FPT+Polytechnic+Hanoi&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" title="FPT Polytechnic Hà Nội"></iframe>
+    </section>
+  </main>
+  <footer>TEA STATION - 2026</footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox-plus-jquery.min.js"></script>
+</body>
+</html>

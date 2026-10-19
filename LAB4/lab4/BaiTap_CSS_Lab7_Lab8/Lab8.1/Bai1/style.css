@@ -1,0 +1,136 @@
+:root {
+  --green: #739846;
+  --dark: #3c413e;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333;
+}
+
+.header {
+  position: relative;
+  min-height: 430px;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  color: white;
+  background: linear-gradient(rgba(0, 0, 0, .45), rgba(0, 0, 0, .45)), url("../../assets/hero-tea.svg") center/cover no-repeat;
+}
+
+.menu-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 14px;
+  font-size: 24px;
+}
+
+.header p,
+.section-title p {
+  color: var(--green);
+  font-size: 23px;
+  letter-spacing: 5px;
+}
+
+.header h1 {
+  font-size: 48px;
+  letter-spacing: 8px;
+}
+
+main {
+  max-width: 1150px;
+  margin: auto;
+  padding: 70px 25px;
+}
+
+section {
+  margin-bottom: 90px;
+}
+
+.section-title {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.product-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+}
+
+.product-list article {
+  padding-bottom: 20px;
+  border-bottom: 4px solid var(--green);
+}
+
+.product-list img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  border-radius: 16px;
+  transition: opacity .3s linear;
+}
+
+.product-list img:hover {
+  opacity: .7;
+}
+
+.product-list h3 {
+  letter-spacing: 2px;
+}
+
+.product-list article > p {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.video {
+  position: relative;
+  width: 100%;
+  padding-top: 56.25%;
+}
+
+.video iframe {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.map {
+  width: 100%;
+  height: 500px;
+  border: 0;
+}
+
+footer {
+  padding: 30px;
+  background: var(--dark);
+  text-align: center;
+  color: white;
+  letter-spacing: 3px;
+}
+
+@media (max-width: 760px) {
+  .product-list {
+    grid-template-columns: 1fr;
+  }
+
+  .header h1 {
+    font-size: 34px;
+  }
+
+  .map {
+    height: 360px;
+  }
+}
